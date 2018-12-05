@@ -1,7 +1,7 @@
 ## 简介
 * 本项目是一个dns服务器
 * 集成了CoreDns与etcd以及一个etcd的ui展示界面etcdkeeper
-* 对相关概念不熟悉的可通过[CoreDns](http://wiki.qishon.com/pages/viewpage.action?pageId=1348582)以及[etcd](http://wiki.qishon.com/pages/viewpage.action?pageId=1348690)自行了解
+* 对相关概念不熟悉的可通过自行了解
 
 
 ## 使用方法
