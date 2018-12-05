@@ -1,0 +1,23 @@
+. {
+    errors 
+    log 
+    cache 60 
+    etcd test.qishon.com dev.qishon.com ops.qishon.com {
+        stubzones 
+        path /intranet
+        endpoint http://127.0.0.1:4001
+        fallthrough
+    }
+    proxy . /etc/resolv.conf {
+            except test.qishon.com dev.qishon.com ops.qishon.com
+        } 
+    proxy . 127.0.0.1:54
+}
+
+.:54 {
+    file /opt/db.mydomain.com
+}
+.:55 {
+    proxy . 8.8.8.8:53
+
+}
